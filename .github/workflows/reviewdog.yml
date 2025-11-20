@@ -10,7 +10,7 @@ jobs:
     name: runner / golangci-lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: reviewdog/action-golangci-lint@v1
         with:
           github_token: ${{ secrets.github_token }}
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
       - name: hadolint
         uses: reviewdog/action-hadolint@v1
         with:
@@ -36,7 +36,7 @@ jobs:
     name: runner / shellcheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1
         with:
@@ -50,7 +50,7 @@ jobs:
     name: runner / misspell
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ secrets.github_token }}
@@ -60,7 +60,7 @@ jobs:
     name: runner / languagetool
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: reviewdog/action-languagetool@v1
         with:
           github_token: ${{ secrets.github_token }}
@@ -73,7 +73,7 @@ jobs:
     name: runner / yamllint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: yamllint
         uses: reviewdog/action-yamllint@v1
         with:
