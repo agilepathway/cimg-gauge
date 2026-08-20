@@ -1,4 +1,4 @@
-FROM cimg/go:1.14-node
+FROM cimg/go:1.27-node
 
 LABEL maintainer="John Boyes <john@agilepathway.co.uk>"
 
